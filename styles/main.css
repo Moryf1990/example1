@@ -13,9 +13,27 @@ body {
 	padding: 1em;
 	box-sizing: border-box;
 	font-size: 2em;
+	background-color: green;
+	background-image: url("https://github.com/Moryf1990/example1/blob/master/images/pandadog.jpg?raw=true");
+	background-size: 15em 15em;
+    background-repeat: no-repeat;
+   /* margin-left: 0em;
+    margin-right: 0em;*/
+  	/*margin: 0 auto;*/
+ 	/*display: inline-block;*/
 }
+
 
 .more {
 	display: none;
 }
+
+/*section.hero {
+	background-image: url("https://github.com/Moryf1990/example1/blob/master/images/pandadog.jpg?raw=true");
+	background-size: 15em 15em;
+    background-repeat: no-repeat;
+    background-color: green;
+}*/
+
+
 
