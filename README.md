@@ -5,7 +5,7 @@ Fork and clone this repository down to your computer. Enter your answers into th
 ## Question 1
 What is the difference between elements that have a CSS property of `display: block` and elements that have a property of `display: inline`?
 
-*Enter your answer here*
+A block-level element will always start on a new line and it takes up the full width of space available. An element with a display property of inline does not start on a new line and it will only take up as much width as it has to.
 
 
 ## Question 2
@@ -13,7 +13,7 @@ Order the following CSS selectors from most specific to least specific. If two s
 
 ```css
 button {
-	color: blue;
+	color: blue;          
 }
 
 body > nav button.navbar-toggle {
@@ -33,7 +33,38 @@ nav div.container div button {
 }
 ```
 
-*Enter your answer here*
+CSS specifity is calculated by importance of their attributes. The most important attribute is the style attribute. The second most important is id, third most important is class/psuedo-class attribute and lastly is the elements themselves. Therefore, I have listed the following examples, with the most specific being listed first, in the following order: 
+
+#logo {
+	color: pink;
+}
+
+The reason this is the most specific example is because it is the only one that has an id value (#logo). None of the other examples have something this specific.
+
+.navbar-header > .collapsed {
+	color: green;
+}
+
+The reason this is the next most specific is because it has two classes (.navbar-header and .collapsed). The reason that they are not pseudo-classes is because they do not describe a specific state of an element (such as :hover).
+
+nav div.container div button {
+	color: red;
+}
+
+The reason this is the next most specific is because it has one class and four elements. The class is .container and the four elements are nav, div, div and button.
+
+
+body > nav button.navbar-toggle {
+	color: red;
+}
+
+The reason this is the next most specific is because it has one class and three elements. The class is .navbar-toggle and the three elements are body, nav and button.
+
+button {
+	color: blue;          
+}
+
+The reason this is the least specific is because it only has one element and that element is button.
 
 ## Question 3
 Link together the index.html file with the main.css and main.js files.
