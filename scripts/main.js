@@ -1,5 +1,7 @@
 'use strict';
 
+// var thumbnails = $('.thumbnails');
+
 var thumbnails = [
 	{
 		caption: 'An Avocado',
@@ -33,6 +35,49 @@ var thumbnails = [
 	}
 ];
 
+// $.each(thumbnails, function(index, value) {
+//     var myCaption = value.caption;
+//     $('.thumbnails').append("<li>" + myCaption + "</li>");
+//     console.log(myCaption);
+// });
+
+$.each(thumbnails, function(index, value) {
+	var myCaption = value.caption;
+	var myImage = value.image;
+	var myURL = value.url;
+	$('.thumbnails').append('<li>' + myCaption + '</li>');
+	$('.thumbnails').append('<a href = "' + myURL + ' ">' + '  ' + '<img src = " '+ myImage + ' ">');
+	console.log(myCaption);
+});
+
+
+// $( '.thumbnails' ).map( function(index, element) {
+//     console.log( element.caption);
+// }).get();
+
+// $.map(thumbnails, function(value, index) {
+// 	console.log('hello');
+// 	return $('.thumbnails').html(value.caption);
+// 	console.log('world');
+// });
+
+// $.each(thumbnails, function(index, value) {
+// 	$('.thumbnails').html(value.caption);
+// 	console.log('Caption: ' + value.caption);
+// 	console.log('Image: ' + value.image);
+// 	console.log('URL: ' + value.url);
+// });
+
+
+// $.each(thumbnails, function(index, value) {
+// 	var caption = value.caption;
+// 	console.log(caption);
+// 	thumbnails.show(caption);
+
+// 	// $.each(value.url, function(j, url) {
+// 	// 	return value.url;
+// 	// });
+// });
 
 
 
